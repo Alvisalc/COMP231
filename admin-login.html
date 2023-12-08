@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h1 alt="logo" onclick="home()">PayRider</h1>
+        <ul>
+            <li><a href="#" onclick="showOption('jobPost')">Job Post</a></li>
+            <li><a href="#" onclick="showOption('recruiter')">Recruiter</a></li>
+            <li><a href="#" onclick="showOption('jobSeeker')">Job Seeker</a></li>
+            <li><a href="/Home.html">Signout</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h3>Admin Control Panel</h1>
+    </header>
+
+    <div id="jobPostSection" style="display:none;">
+        <h2>Job Post Section</h2>
+        <table border="1">
+            <tr>
+                <th>Job Title</th>
+                <th>Company</th>
+                <th>Location</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>Software Developer</td>
+                <td>ABC Tech</td>
+                <td>New York</td>
+                <td>
+                    <button onclick="editJobPost(1)">Edit</button>
+                    <button onclick="deleteJobPost(1)">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Marketing Specialist</td>
+                <td>XYZ Marketing</td>
+                <td>Los Angeles</td>
+                <td>
+                    <button onclick="editJobPost(2)">Edit</button>
+                    <button onclick="deleteJobPost(2)">Delete</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <div id="recruiterSection" style="display:none;">
+        <h2>Recruiter Section</h2>
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th>Company</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>John Doe</td>
+                <td>ABC Tech</td>
+                <td>john@example.com</td>
+                <td>
+                    <button onclick="editRecruiter(1)">Edit</button>
+                    <button onclick="deleteRecruiter(1)">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>XYZ Marketing</td>
+                <td>jane@example.com</td>
+                <td>
+                    <button onclick="editRecruiter(2)">Edit</button>
+                    <button onclick="deleteRecruiter(2)">Delete</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <div id="jobSeekerSection" style="display:none;">
+        <h2>Job Seeker Section</h2>
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Resume</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>Alice Johnson</td>
+                <td>alice@example.com</td>
+                <td><a href="#">View Resume</a></td>
+                <td>
+                    <button onclick="editJobSeeker(1)">Edit</button>
+                    <button onclick="deleteJobSeeker(1)">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Bob Williams</td>
+                <td>bob@example.com</td>
+                <td><a href="#">View Resume</a></td>
+                <td>
+                    <button onclick="editJobSeeker(2)">Edit</button>
+                    <button onclick="deleteJobSeeker(2)">Delete</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

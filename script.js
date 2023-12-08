@@ -20,3 +20,14 @@ document.getElementById("freeTrialBtn").addEventListener("click", function() {
 function home(){
     window.location.href = "/Home.html";
 }
+
+
+function showOption(option) {
+    // Hide all sections
+    document.getElementById('jobPostSection').style.display = 'none';
+    document.getElementById('recruiterSection').style.display = 'none';
+    document.getElementById('jobSeekerSection').style.display = 'none';
+
+    // Show the selected section
+    document.getElementById(option + 'Section').style.display = 'block';
+}
